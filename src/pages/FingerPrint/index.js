@@ -1,14 +1,48 @@
-import React from 'react';
-import {View, Button, Biometria, TouchableOpacity, Image, Text } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import {View, TouchableOpacity, TouchableHighlight, useColorScheme, Image, Text } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import MenuBar from '../../component/MenuBar';
 import styles from '../Switch/styles';
+
+import TouchID from  'react-native-touch-id';
 
 
 import logo from '../../../images/logo.png';
 import imgFinger from '../../../images/digital.png' 
 
 export default function FingerPrint(){
+
+    const [supported, setSupported] = useState(null);
+
+    useEffect(() =>{
+        TouchID.isSupported()
+        .then(sucess =>{
+            setSupported(true);
+            //alert("Touch Id habilitado");
+        })
+        .catch(() => {
+            //console.log("erro touch");
+            alert("Touch Id não suportado/habilitado");
+        })
+    }, []);
+
+    function handle(){
+        const configs = {
+            title: "Autenticacao Touch id",
+            imageColor: '#e00606',
+            sensorErrorDescription: "Touch ID invalido",
+            sensorErrorDescription: 'Failed',
+        };
+        TouchID.authenticate("Auticacao", configs)
+        .then((sucess)=>{
+            console.log("autorizado");
+            navigateToSucess();
+        })
+        .catch((error)=>{
+            console.log("falha na autenticacao" + error);
+            navigateToFail();
+        });
+    }
 
     const navigation = useNavigation();
 
@@ -37,17 +71,13 @@ export default function FingerPrint(){
                     <View style={styles.imgDigital}>
                         <Image source={imgFinger}/>
                     </View>
-                    
 
-                    <View style={styles.btnsTeste}>
-                        <TouchableOpacity style={styles.btn} onPress={ () => navigateToSucess()} >
-                            <Text> Sucess</Text>
-                        </TouchableOpacity>
-                            
-                        <TouchableOpacity style={styles.btn} onPress={ () => navigateToFail()} >
-                            <Text> Fail</Text>
-                        </TouchableOpacity>
-                    </View>
+                    <TouchableHighLight style={styles.btn} onPress={ handle }>
+                        <Text>
+                            Iniciar.
+                        </Text>
+                    </TouchableHighLight>
+                    
             </View>
         
         </View>
