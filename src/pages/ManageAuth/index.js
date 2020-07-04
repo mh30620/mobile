@@ -4,7 +4,7 @@ import {useNavigation} from '@react-navigation/native';
 import MenuBar from '../../component/MenuBar';
 
 import logo from '../../../images/logo.png';
-import styles from './styles';
+import styles from '../Switch/styles';
 
 export default function ManageAuth(){
     

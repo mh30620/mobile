@@ -5,18 +5,18 @@ import MenuBar from '../../component/MenuBar';
 
 import logo from '../../../images/logo.png';
 import imgFinger from '../../../images/digital.png' 
-import styles from './styles';
+import styles from '../Switch/styles';
 
 export default function ManageFaces(){
     
     const navigation = useNavigation();
 
-    function navigateToRegisterFingerPrints(){
-        navigation.navigate('RegisterFingerPrint');
+    function navigateToRegisterFace(){
+        navigation.navigate('RegisterFace');
     }
 
-    function navigateToDeleteFingerPrint(){
-        navigation.navigate('DeleteFingerPrint');
+    function navigateToDeleteFace(){
+        navigation.navigate('DeleteFace');
     }
     
     return(

@@ -5,7 +5,7 @@ import MenuBar from '../../component/MenuBar';
 
 import logo from '../../../images/logo.png';
 import imgFinger from '../../../images/digital.png' 
-import styles from './styles';
+import styles from '../Switch/styles';
 
 export default function ManageFingerPrint(){
     
