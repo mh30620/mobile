@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Button, Image, Text, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import MenuBar from '../../component/MenuBar';
+import ProgressBar from '../../component/ProgressBar';
 import styles from '../Switch/styles';
 
 import logo from '../../../images/logo.png';
@@ -35,9 +36,7 @@ export default function RegisterFace(){
                     </Text>
                  </View>
 
-                 <View style={styles.btnsTeste}>
-                    <Text>Barra de progresso aqui.. implementar ainda!</Text>
-                </View>
+                <ProgressBar/>
                     
             </View>
             
