@@ -6,9 +6,9 @@ import styles from '../Switch/styles';
 
 
 import logo from '../../../images/logo.png';
-import imgFinger from '../../../images/digital.png' 
+import imgFinger from '../../../images/digitalmd.png' 
 
-export default function DeleteFingerPrint(){
+export default function DeleteFingerPrints(){
 
     const navigation = useNavigation();
 
@@ -34,17 +34,14 @@ export default function DeleteFingerPrint(){
                         Realmente deseja excluir essa biometria?
                     </Text>
 
-                    <View style={styles.imgDigital}>
-                        <Image source={imgFinger}/>
-                        <Text>Thauany</Text>
+                    <View style={styles.card}>
+                        <Image style={styles.imgCard} source={imgFinger}/>
+                        <Text style={styles.nameCard}>Thauany</Text>
                     </View>
                     
-
-                    <View style={styles.btnsTeste}>
-                        <TouchableOpacity style={styles.btn} onPress={ () => navigateToSucess()} >
-                            <Text>Confirmar</Text>
-                        </TouchableOpacity>
-                    </View>
+                    <TouchableOpacity style={styles.action} onPress={ () => navigateToSucess()} >
+                         <Text style={styles.actionText}>Confirmar</Text>
+                    </TouchableOpacity>
             </View>
         
         </View>

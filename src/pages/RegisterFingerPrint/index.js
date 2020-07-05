@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Biometria, TouchableOpacity, Image, Text } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import MenuBar from '../../component/MenuBar';
+import ProgressBar from '../../component/ProgressBar';
 import styles from '../Switch/styles';
 
 
@@ -30,14 +31,12 @@ export default function RegisterFingerPrint(){
                         Coloque o dedo no leitor digital do seu celular em diferentes posições
                     </Text>
 
-                    <View style={styles.imgDigital}>
-                        <Image source={imgFinger}/>
+                    <View style={styles.card}>
+                        <Image style={styles.imgCard} source={imgFinger}/>
                     </View>
                     
-
-                    <View>
-                       <Text>Barra de progresso aqui.. implemtar ainda!</Text>
-                    </View>
+                    <ProgressBar/>
+                    
             </View>
         
         </View>

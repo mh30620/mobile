@@ -27,7 +27,7 @@ export default function RegisterFace(){
             <View style={styles.content}>
                     
                 <Text style={styles.title}>
-                    Aproxime-se e posicione a face frente a câmera frontal para que possamos capturar a face
+                    Posicione-se frente a câmera frontal para captura da face
                 </Text>
                     
                 <View style={styles.cam}>

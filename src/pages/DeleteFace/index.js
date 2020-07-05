@@ -6,7 +6,7 @@ import styles from '../Switch/styles';
 
 
 import logo from '../../../images/logo.png';
-import imgFinger from '../../../images/digital.png' 
+import imgFace from '../../../images/pessoa1.png' 
 
 export default function DeleteFace(){
 
@@ -25,23 +25,20 @@ export default function DeleteFace(){
             <View style={styles.content}>
                     
                     <Text style={styles.title}>
-                        Deletar Rosto
+                        Deletar Face
                     </Text>
                     <Text style={styles.textDescription}>
-                        Realmente deseja excluir esse Rosto?
+                        Realmente deseja excluir essa Face?
                     </Text>
 
-                    <View style={styles.imgDigital}>
-                        <Image source={imgFinger}/>
-                        <Text>Thauany</Text>
+                    <View style={styles.card}>
+                        <Image source={imgFace} style={styles.imgCard}/>
+                        <Text style={styles.nameCard}>Thauany</Text>
                     </View>
                     
-
-                    <View style={styles.btnsTeste}>
-                        <TouchableOpacity style={styles.btn} onPress={ () => navigateToSucess()} >
-                            <Text>Confirmar</Text>
-                        </TouchableOpacity>
-                    </View>
+                    <TouchableOpacity style={styles.action} onPress={ () => navigateToSucess()} >
+                        <Text style={styles.actionText}>Confirmar</Text>
+                    </TouchableOpacity>
             </View>
         
         </View>

@@ -5,7 +5,7 @@ import styles from './styles';
 
 export default function ProgressBar() {
     
-    const [offsetX] = useState(new Animated.Value(-400));
+    const [offsetX] = useState(new Animated.Value(-200));
     
     const translate = Animated.timing(offsetX, {
       toValue: 0,
@@ -14,7 +14,7 @@ export default function ProgressBar() {
       useNativeDriver: true,
     });
     const reset = Animated.timing(offsetX, {
-      toValue: -430,
+      toValue: -180,
       duration: 0,
       useNativeDriver: true,
     });
@@ -30,7 +30,7 @@ export default function ProgressBar() {
     const transform = {transform: [{translateX: offsetX}]};
     
     return (
-      <SafeAreaView>
+      <SafeAreaView >
         <Animated.View style={styles.syncProgressBarContainer}>
           <Animated.View style={[transform, styles.syncProgressBar]} />
           <Animated.View style={[transform, styles.syncProgressBar]} />

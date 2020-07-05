@@ -4,7 +4,7 @@ import {useNavigation} from '@react-navigation/native';
 import MenuBar from '../../component/MenuBar';
 
 import logo from '../../../images/logo.png';
-import imgFinger from '../../../images/digital.png' 
+import imgFace from '../../../images/pessoa.png' 
 import styles from '../Switch/styles';
 
 export default function ManageFaces(){
@@ -18,6 +18,8 @@ export default function ManageFaces(){
     function navigateToDeleteFace(){
         navigation.navigate('DeleteFace');
     }
+
+
     
     return(
         <View style={styles.container} >
@@ -27,27 +29,34 @@ export default function ManageFaces(){
             <View style={styles.content}>
                     
                     <Text style={styles.text}>
-                        Rostos Cadastrados
+                        Faces Cadastradas
                     </Text>
 
-                    <View style={styles.cardFinger}>
-                        <Image style={styles.imgFinger} source={imgFinger} ></Image>
-                        <Text style={styles.nameFinger} >Thauany</Text>
+                    <View style={styles.cards}>
+                        <TouchableOpacity style={styles.card}>
+                            <Image style={styles.imgCard } source={imgFace} ></Image>
+                            <Text style={styles.nameCard} >João</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.card}>
+                            <Image style={styles.imgCard} source={imgFace} ></Image>
+                            <Text style={styles.nameCard} >Maria</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.card}>
+                            <Image style={styles.imgCard} source={imgFace} ></Image>
+                            <Text style={styles.nameCard} >José</Text>
+                        </TouchableOpacity>
                     </View>
-                    <View style={styles.cardFinger}>
-                        <Image style={styles.imgFinger} source={imgFinger} ></Image>
-                        <Text style={styles.nameFinger} >Thauany</Text>
-                    </View>
+                    
                     
                     <TouchableOpacity 
                         style={styles.action}
                         onPress={ () => navigateToRegisterFace()}
                     >
-                        <Text style={styles.actionText}> Registrar novo Rosto</Text>
+                        <Text style={styles.actionText}> Registrar Face</Text>
                     </TouchableOpacity>
                     
                     <TouchableOpacity style={styles.action} onPress={ () => navigateToDeleteFace()} >
-                        <Text style={styles.actionText}> Deletar um Rosto</Text>
+                        <Text style={styles.actionText}> Deletar face selecionada</Text>
                     </TouchableOpacity>
             </View>
         

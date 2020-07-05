@@ -19,8 +19,6 @@ export default StyleSheet.create({
         fontSize: 22,
         marginTop: 25,
         marginHorizontal: 20,
-
-    
     },
 
     text:{
@@ -55,6 +53,30 @@ export default StyleSheet.create({
         marginTop:25,
     },
 
+    cards:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        borderRadius: 4,
+        borderColor: '#040429',
+    },
+
+    card:{
+        marginHorizontal:10,
+        backgroundColor: '#fff',
+        marginVertical: 10,
+    },
+
+    imgCard: {
+        marginTop: 10,
+        marginHorizontal: 5,
+    },
+
+    nameCard:{
+        textAlign: 'center',
+        marginTop: 2,
+    },
+
     action:{
         backgroundColor: '#3483FA',
         borderRadius:2,
@@ -66,7 +88,7 @@ export default StyleSheet.create({
     },
 
     actionText:{
-        color:'#FFF',
+        color:'#FFFFFF',
         fontSize:17,
         fontWeight: 'bold'
     },

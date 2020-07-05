@@ -4,7 +4,7 @@ import {useNavigation} from '@react-navigation/native';
 import MenuBar from '../../component/MenuBar';
 
 import logo from '../../../images/logo.png';
-import imgFinger from '../../../images/digital.png' 
+import imgFinger from '../../../images/digital_small.png' 
 import styles from '../Switch/styles';
 
 export default function ManageFingerPrint(){
@@ -16,7 +16,7 @@ export default function ManageFingerPrint(){
     }
 
     function navigateToDeleteFingerPrint(){
-        navigation.navigate('DeleteFingerPrint');
+        navigation.navigate('DeleteFingerPrints');
     }
     
     return(
@@ -30,14 +30,21 @@ export default function ManageFingerPrint(){
                         Biometrias Cadastradas
                     </Text>
 
-                    <View style={styles.cardFinger}>
-                        <Image style={styles.imgFinger} source={imgFinger} ></Image>
-                        <Text style={styles.nameFinger} >Thauany</Text>
+                    <View style={styles.cards}>
+                        <TouchableOpacity style={styles.card}>
+                            <Image style={styles.imgCard} source={imgFinger} ></Image>
+                            <Text style={styles.nameCard} >João</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.card}>
+                            <Image style={styles.imgCard} source={imgFinger} ></Image>
+                            <Text style={styles.nameCard}> Maria</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.card}>
+                            <Image style={styles.imgCard} source={imgFinger} ></Image>
+                            <Text style={styles.nameCard} > José </Text>
+                        </TouchableOpacity>
                     </View>
-                    <View style={styles.cardFinger}>
-                        <Image style={styles.imgFinger} source={imgFinger} ></Image>
-                        <Text style={styles.nameFinger} >Thauany</Text>
-                    </View>
+                    
                     
                     <TouchableOpacity 
                         style={styles.action}
