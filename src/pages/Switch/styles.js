@@ -12,13 +12,15 @@ export default StyleSheet.create({
         flex:1,
         alignItems: 'center',
         justifyContent: 'center',
+        height:'100%',
     },
 
     title:{
         fontSize: 22,
-        marginTop: -200,
+        marginTop: -250,
         marginHorizontal: 20,
     },
+
 
     text:{
         fontSize: 21,
@@ -37,16 +39,23 @@ export default StyleSheet.create({
     },
 
     cam:{
-        backgroundColor: '#C4C4C4',
-        width: '70%',
-        height: '64%',
-        marginTop: 40,
+        width: '85%',
+        height: '130%',
+        marginTop: 20,
+        
     },
 
-    camText:{
-        fontSize:15,
-        textAlign: "center",
+    btnCam:{
+        alignSelf: 'flex-end',
+        alignItems:'center',
+     
     },
+
+    iconCam:{
+        margin: 5,
+        alignSelf: 'center',
+    },
+
 
     imgDigital:{
         marginTop:25,

@@ -23,13 +23,13 @@ export default function Routes(){
     return(
         <NavigationContainer>
             <AppStack.Navigator screenOptions={{headerShown:false}} >
-                <AppStack.Screen name="ManageAuth" component={ManageAuth}/>
+                
                 <AppStack.Screen name="Switch" component={Switch}/>
                 <AppStack.Screen name="Face" component={Face}/>
                 <AppStack.Screen name="FingerPrint" component={FingerPrint}/>
                 <AppStack.Screen name="Fail" component={Fail}/>
                 <AppStack.Screen name="Sucess" component={Sucess}/>
-                
+                <AppStack.Screen name="ManageAuth" component={ManageAuth}/>
                 <AppStack.Screen name="ManageFaces" component={ManageFaces}/>
                 <AppStack.Screen name="ManageFingerPrint" component={ManageFingerPrint}/>
                 <AppStack.Screen name="RegisterFace" component={RegisterFace}/>
