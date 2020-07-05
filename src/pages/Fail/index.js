@@ -7,7 +7,7 @@ import styles from '../Switch/styles';
 import logo from '../../../images/logo.png';
 import imgFail from '../../../images/falha.png' 
 
-export default function Fail(){
+export default function Fail(props){
     const navigation = useNavigation();
 
     function navigateToSwitch(){
@@ -21,7 +21,7 @@ export default function Fail(){
     return(
         <View style={styles.container} >
             
-            <MenuBar/>
+            <MenuBar {...props} navigation={navigation}/>
 
             <View style={styles.content}>
                     

@@ -7,7 +7,7 @@ import logo from '../../../images/logo.png';
 import imgFinger from '../../../images/digital_small.png' 
 import styles from '../Switch/styles';
 
-export default function ManageFingerPrint(){
+export default function ManageFingerPrint(props){
     
     const navigation = useNavigation();
 
@@ -22,7 +22,7 @@ export default function ManageFingerPrint(){
     return(
         <View style={styles.container} >
             
-            <MenuBar/>
+            <MenuBar {...props} navigation={navigation}/>
 
             <View style={styles.content}>
                     

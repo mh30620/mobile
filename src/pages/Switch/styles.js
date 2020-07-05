@@ -3,27 +3,26 @@ import Constants from 'expo-constants';
 
 export default StyleSheet.create({
     container:{
-        backgroundColor: "#FFF059",
+        backgroundColor: "#ffffff",
         flex: 1,
-        paddingTop: Constants.statusBarHeight,
+        
     },
 
     content:{
         flex:1,
-        backgroundColor: "#ffffff",
         alignItems: 'center',
         justifyContent: 'center',
     },
 
     title:{
         fontSize: 22,
-        marginTop: 25,
+        marginTop: -200,
         marginHorizontal: 20,
     },
 
     text:{
         fontSize: 21,
-        marginTop: -40,
+        marginTop: -300,
         marginBottom: 40,
         marginHorizontal: 20,
         textAlign: "center",

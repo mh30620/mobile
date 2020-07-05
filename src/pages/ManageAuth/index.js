@@ -6,7 +6,7 @@ import MenuBar from '../../component/MenuBar';
 import logo from '../../../images/logo.png';
 import styles from '../Switch/styles';
 
-export default function ManageAuth(){
+export default function ManageAuth(props){
     
     const navigation = useNavigation();
 
@@ -21,7 +21,7 @@ export default function ManageAuth(){
     return(
         <View style={styles.container} >
             
-            <MenuBar/>
+            <MenuBar {...props} navigation={navigation}/>
 
             <View style={styles.content}>
                     

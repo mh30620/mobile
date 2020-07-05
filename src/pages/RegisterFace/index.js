@@ -7,7 +7,7 @@ import styles from '../Switch/styles';
 
 import logo from '../../../images/logo.png';
 
-export default function RegisterFace(){
+export default function RegisterFace(props){
 
     const navigation = useNavigation();
 
@@ -22,7 +22,7 @@ export default function RegisterFace(){
     return(
         <View style={styles.container} >
             
-            <MenuBar/>
+            <MenuBar {...props} navigation={navigation}/>
 
             <View style={styles.content}>
                     

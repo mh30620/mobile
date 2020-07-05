@@ -7,7 +7,7 @@ import MenuBar from '../../component/MenuBar';
 import logo from '../../../images/logo.png';
 import styles from './styles';
 
-export default function Switch(){
+export default function Switch(props){
     
     const navigation = useNavigation();
 
@@ -22,7 +22,7 @@ export default function Switch(){
     return(
         <View style={styles.container} >
             
-            <MenuBar/>
+            <MenuBar {...props} navigation={navigation}/>
 
             <View style={styles.content}>
                     

@@ -8,7 +8,7 @@ import styles from '../Switch/styles';
 import logo from '../../../images/logo.png';
 import imgFinger from '../../../images/digitalmd.png' 
 
-export default function DeleteFingerPrints(){
+export default function DeleteFingerPrints(props){
 
     const navigation = useNavigation();
 
@@ -23,7 +23,7 @@ export default function DeleteFingerPrints(){
     return(
         <View style={styles.container} >
             
-            <MenuBar/>
+            <MenuBar {...props} navigation={navigation}/>
 
             <View style={styles.content}>
                     

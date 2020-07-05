@@ -8,7 +8,7 @@ import styles from '../Switch/styles';
 import logo from '../../../images/logo.png';
 import imgFace from '../../../images/pessoa1.png' 
 
-export default function DeleteFace(){
+export default function DeleteFace(props){
 
     const navigation = useNavigation();
 
@@ -20,7 +20,7 @@ export default function DeleteFace(){
     return(
         <View style={styles.container} >
             
-            <MenuBar/>
+            <MenuBar {...props} navigation={navigation}/>
 
             <View style={styles.content}>
                     

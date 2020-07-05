@@ -7,11 +7,11 @@ import styles from '../Switch/styles';
 import logo from '../../../images/logo.png';
 import imgSucess from '../../../images/certo.png' 
 
-export default function Sucess(){
+export default function Sucess(props){
     return(
         <View style={styles.container} >
             
-            <MenuBar/>
+            <MenuBar {...props} navigation={navigation}/>
 
             <View style={styles.content}>
                     

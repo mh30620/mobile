@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {View, TouchableOpacity, TouchableHighlight, useColorScheme, Image, Text } from 'react-native';
+import {View, TouchableOpacity, TouchableHighLight, useColorScheme, Image, Text } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import MenuBar from '../../component/MenuBar';
 import styles from '../Switch/styles';
@@ -10,7 +10,7 @@ import TouchID from  'react-native-touch-id';
 import logo from '../../../images/logo.png';
 import imgFinger from '../../../images/digital.png' 
 
-export default function FingerPrint(){
+export default function FingerPrint(props){
 
     const [supported, setSupported] = useState(null);
 
@@ -36,11 +36,11 @@ export default function FingerPrint(){
         TouchID.authenticate("Auticacao", configs)
         .then((sucess)=>{
             console.log("autorizado");
-            navigateToSucess();
+            //navigateToSucess();
         })
         .catch((error)=>{
             console.log("falha na autenticacao" + error);
-            navigateToFail();
+            //navigateToFail();
         });
     }
 
@@ -57,7 +57,7 @@ export default function FingerPrint(){
     return(
         <View style={styles.container} >
             
-            <MenuBar/>
+            <MenuBar {...props} navigation={navigation}/>
 
             <View style={styles.content}>
                     

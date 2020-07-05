@@ -7,7 +7,7 @@ import logo from '../../../images/logo.png';
 import imgFace from '../../../images/pessoa.png' 
 import styles from '../Switch/styles';
 
-export default function ManageFaces(){
+export default function ManageFaces(props){
     
     const navigation = useNavigation();
 
@@ -24,7 +24,7 @@ export default function ManageFaces(){
     return(
         <View style={styles.container} >
             
-            <MenuBar/>
+            <MenuBar {...props} navigation={navigation}/>
 
             <View style={styles.content}>
                     
