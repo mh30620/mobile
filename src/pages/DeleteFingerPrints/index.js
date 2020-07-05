@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, Button, Biometria, TouchableOpacity, Image, Text } from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import {View, TouchableOpacity, Image, Text } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import MenuBar from '../../component/MenuBar';
 import styles from '../Switch/styles';
 

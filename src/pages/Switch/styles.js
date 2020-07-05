@@ -17,7 +17,7 @@ export default StyleSheet.create({
 
     title:{
         fontSize: 22,
-        marginTop: -250,
+        marginTop: -210,
         marginHorizontal: 20,
     },
 

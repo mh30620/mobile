@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import {View, Button, Image, Text, TouchableOpacity} from 'react-native';
+import {View,Text, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import { Camera } from 'expo-camera';
 import { Entypo } from '@expo/vector-icons';
 import MenuBar from '../../component/MenuBar';
 import styles from '../Switch/styles';
 
-import logo from '../../../images/logo.png';
 
 export default function Face(props){
 
     const [hasPermission, setHasPermission] = useState(null);
-    const [cameraRef, setCameraRef] = useState (null) 
 
     useEffect(() => {
         (async () => {
@@ -21,10 +19,9 @@ export default function Face(props){
     }, []);
 
     snap = async () => {
-        if (this.camera) {
-          let photo = await this.camera.takePictureAsync();
-          console.log ('photo', photo);
-        }
+        let photo = await this.camera.takePictureAsync();
+        console.log('photo', photo)
+        navigateToSucess();
     };
 
     if (hasPermission === null) {
@@ -57,7 +54,7 @@ export default function Face(props){
                     
                 <View style={styles.cam}>
                     <Camera 
-                        ref = {ref => { setCameraRef (ref);}}
+                        ref={ref => {this.camera = ref;}}
                         style={{ flex: 1 }} 
                         type={Camera.Constants.Type.front}>
                         <View
@@ -69,7 +66,7 @@ export default function Face(props){
                         >
                             <TouchableOpacity 
                                 style={styles.btnCam}
-                                onPress={() => snap()}>
+                                onPress={() => this.snap}>
                                 <Entypo style={styles.iconCam} name="camera" size={40} color="white" />
                             </TouchableOpacity>
 
